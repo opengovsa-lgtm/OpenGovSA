@@ -32,7 +32,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-**Note:** On Windows, some packages may require Visual Studio Build Tools for compilation. For local development on Windows, consider using Docker or WSL2.
+**Note:** This project requires Python 3.12. It is not compatible with Python 3.14 due to package dependency constraints. On Windows, some packages may require Visual Studio Build Tools for compilation. For local development on Windows, consider using Docker or WSL2 with Python 3.12.
 
 ## Configuration
 
