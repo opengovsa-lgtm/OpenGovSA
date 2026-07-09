@@ -8,7 +8,7 @@ To provide evidence-based public information from official sources such as SIU r
 
 ## Tech Stack
 
-- **Python 3.12**
+- **Python 3.12** (Required - not compatible with Python 3.14)
 - **FastAPI** - Web framework
 - **SQLAlchemy 2.0** - ORM
 - **Alembic** - Database migrations
