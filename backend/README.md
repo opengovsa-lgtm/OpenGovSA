@@ -32,6 +32,8 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+**Note:** On Windows, some packages may require Visual Studio Build Tools for compilation. For local development on Windows, consider using Docker or WSL2.
+
 ## Configuration
 
 Copy `.env.example` to `.env` and configure your environment variables:
