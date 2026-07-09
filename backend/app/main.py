@@ -1,11 +1,22 @@
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI
 
-app = FastAPI(title="OpenGovSA API", version="0.1.0")
+from app.api.v1.router import api_router
+from app.core.config import settings
+from app.core.logging import setup_logging
 
-@app.get("/")
-def root():
-    return {"application":"OpenGovSA","status":"online"}
 
-@app.get("/health")
-def health():
-    return {"status":"healthy"}
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    setup_logging()
+    yield
+
+
+app = FastAPI(
+    title=settings.PROJECT_NAME,
+    version=settings.VERSION,
+    lifespan=lifespan,
+)
+
+app.include_router(api_router, prefix=settings.API_V1_PREFIX)
