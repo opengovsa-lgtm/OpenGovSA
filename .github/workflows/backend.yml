@@ -106,4 +106,4 @@ jobs:
       run: docker build -t opengovsa-backend .
     
     - name: Validate docker-compose config
-      run: docker-compose config
+      run: docker compose config
