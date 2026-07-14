@@ -13,6 +13,7 @@ class Settings(BaseSettings):
     VERSION: str = "0.1.0"
     API_V1_PREFIX: str = "/api/v1"
     LOG_LEVEL: str = "INFO"
+    SECRET_KEY: str = "change-me-in-production-use-random-64-char-string"  # TODO: Use environment variable in production
 
 
 settings = Settings()
