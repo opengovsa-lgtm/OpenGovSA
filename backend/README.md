@@ -42,6 +42,11 @@ Copy `.env.example` to `.env` and configure your environment variables:
 cp .env.example .env
 ```
 
+**Important Security Notes:**
+- `SECRET_KEY` must be changed to a cryptographically secure random string in production
+- `DATABASE_URL` should use environment-specific credentials
+- CORS origins should be restricted to specific domains in production
+
 ## Running the Application
 
 ```bash
